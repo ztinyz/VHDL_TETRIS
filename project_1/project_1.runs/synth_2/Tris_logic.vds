@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun May 19 13:39:35 2024
+# Process ID: 17964
+# Current directory: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2
+# Command line: vivado.exe -log Tris_logic.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tris_logic.tcl
+# Log file: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/Tris_logic.vds
+# Journal file: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2\vivado.jou
+# Running On: DESKTOP-ODUVKK8, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16479 MB
+#-----------------------------------------------------------
+source Tris_logic.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 484.711 ; gain = 179.805
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/utils_1/imports/synth_2/vga.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/utils_1/imports/synth_2/vga.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Tris_logic -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20404
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1318.613 ; gain = 439.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Tris_logic' [C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd:38]
+ERROR: [Synth 8-11324] array index -1 out of range [C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd:58]
+WARNING: [Synth 8-614] signal 'index2' is read in the process but is not in the sensitivity list [C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd:77]
+WARNING: [Synth 8-614] signal 'index3' is read in the process but is not in the sensitivity list [C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd:77]
+ERROR: [Synth 8-285] failed synthesizing module 'Tris_logic' [C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1425.406 ; gain = 546.043
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 2 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun May 19 13:40:36 2024...
