@@ -44,7 +44,7 @@ signal BTNR: std_logic := '0';
 signal BTNL: std_logic := '0';
 signal BTNC: std_logic := '0';
 
-type coloana_matrix is array (1 to 6, 7 to 0) of std_logic;
+type coloana_matrix is array (1 to 6, 7 downto 0) of std_logic;
 signal coloana: coloana_matrix :=  ("10000000", "11010000", "11100000", "11110000", "11111000", "11111000");
 
 signal clock: std_logic := '0';
@@ -55,7 +55,6 @@ signal index3: integer := 6;
 
 procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: inout integer; index3: inout integer; index: in integer) is
     begin
-        
         if (coloana(7)='1') then        
         for index2 in 6 downto 1 loop
             if(coloana(index2) = '0')then
@@ -106,7 +105,6 @@ begin
         else
             index <= index - 1;
         end if;
-
         for i in 1 to 6 loop
             for j in 0 to 7 loop
                 v_coloana(j) := coloana(i, j);

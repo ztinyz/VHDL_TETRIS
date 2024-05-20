@@ -1,6 +1,6 @@
 
 { 
-    crc :  18073767751216131994  , 
+    crc :  582413098905949919  , 
     ccp_crc :  0  , 
     cmdline : " --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Tris_logic_behav xil_defaultlib.Tris_logic" , 
     buildDate : "Oct 13 2023" , 
