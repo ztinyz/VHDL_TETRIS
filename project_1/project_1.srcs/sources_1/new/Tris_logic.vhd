@@ -32,17 +32,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Tris_logic is
---  Port ( );
+    --Port ( 
+    --BTNL: in std_logic;
+    --BTNR: in std_logic
+    --);
 end Tris_logic;
 
 architecture Behavioral of Tris_logic is
 
-signal coloana1: std_logic_vector(7 downto 0):="11100001";
-signal coloana2: std_logic_vector(7 downto 0):="11110001";
-signal coloana3: std_logic_vector(7 downto 0):="10000001";
-signal coloana4: std_logic_vector(7 downto 0):="11000001";
-signal coloana5: std_logic_vector(7 downto 0):=x"AF";
+signal BTNR: std_logic := '0';
+signal BTNL: std_logic := '0';
+signal BTNC: std_logic := '0';
+
+type coloana_matrix is array (1 to 6, 7 to 0) of std_logic;
+signal coloana: coloana_matrix :=  ("10000000", "11010000", "11100000", "11110000", "11111000", "11111000");
+
 signal clock: std_logic := '0';
+
 signal index: integer := 6;
 signal index2: integer := 6; -- pt cea mai de jos cu piesa pe ea ( unde se opreste urm piesa)
 signal index3: integer := 6;
@@ -70,58 +76,49 @@ end procedure update_coloana;
 
 begin
 
+process -- procces pt butoane
+begin
+BTNR <= not(BTNR);
+wait for 100ns;
+BTNL <= not(BTNL);
+wait for 100ns;
+BTNC <= not(BTNC);
+wait for 100ns;
+end process;
+
 process
 begin
 clock <= not(clock);
 wait for 50ns;
 end process;
 
-process(coloana1,coloana2,coloana3,coloana4,coloana5,index,clock,index2,index3)
+process(clock)
     variable v_index2: integer;
     variable v_index3: integer;
     variable v_coloana: std_logic_vector(7 downto 0);
-begin  
-
+begin
     v_index2 := index2;
     v_index3 := index3;
-  
-if (rising_edge(clock)) then
-    if(index = 0) then
-        index<= 6 ;
-    else
-        index<=index - 1;
+
+    if (rising_edge(clock)) then
+        if(index = 0) then
+            index <= 6;
+        else
+            index <= index - 1;
+        end if;
+
+        for i in 1 to 6 loop
+            for j in 0 to 7 loop
+                v_coloana(j) := coloana(i, j);
+            end loop;
+            update_coloana(v_coloana, v_index2, v_index3, index);
+            for j in 0 to 7 loop
+                coloana(i, j) <= v_coloana(j);
+            end loop;
+        end loop;
     end if;
     
-    v_coloana := coloana1;
-    update_coloana(v_coloana, v_index2, v_index3, index);
-    coloana1 <= v_coloana;
-    
-    v_coloana := coloana2;
-    update_coloana(v_coloana, v_index2, v_index3, index);
-    coloana2 <= v_coloana;
-    
-    v_coloana := coloana3;
-    update_coloana(v_coloana, v_index2, v_index3, index);
-    coloana3 <= v_coloana;
-    
-    v_coloana := coloana4;
-    update_coloana(v_coloana, v_index2, v_index3, index);
-    coloana4 <= v_coloana;
-    
-    v_coloana := coloana5;
-    update_coloana(v_coloana, v_index2, v_index3, index);
-    coloana5 <= v_coloana;
-    
-    --coloana2(index + 1)<= coloana2(index);
-    --coloana2(0)<= '0';
-    --coloana3(index + 1)<= coloana3(index);
-    --coloana3(0)<= '0';
-    --coloana4(index + 1)<= coloana4(index);
-    --coloana4(0)<= '0';
-    --coloana5(index + 1)<= coloana5(index);
-    --coloana5(0)<= '0';
-    --coloana6(index + 1)<= coloana6(index);
-    --coloana6(0)<= '0';
-end if;
 end process;
+
+
 end Behavioral;
