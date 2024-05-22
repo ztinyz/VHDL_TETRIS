@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/Tris_logic.tcl"
+  variable script "C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_2" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -84,7 +86,10 @@ set_property ip_output_repo c:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/Tris_logic.vhd
+read_vhdl -library xil_defaultlib {
+  C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/clkdiv.vhd
+  C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -94,8 +99,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Bardi/Desktop/VGA_Basys3/project_1.srcs/constrs_1/imports/Desktop/Basys-3-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Bardi/Desktop/VGA_Basys3/project_1.srcs/constrs_1/imports/Desktop/Basys-3-Master.xdc]
+read_xdc C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/constrs_1/Basys-3-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.srcs/constrs_1/Basys-3-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
@@ -103,7 +108,7 @@ read_checkpoint -auto_incremental -incremental C:/Users/Bardi/Desktop/VHDL_TETRI
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top Tris_logic -part xc7a35tcpg236-1
+synth_design -top vga -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -113,10 +118,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Tris_logic.dcp
+write_checkpoint -force -noxdef vga.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_2_synth_report_utilization_0" "report_utilization -file Tris_logic_utilization_synth.rpt -pb Tris_logic_utilization_synth.pb"
+create_report "synth_2_synth_report_utilization_0" "report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

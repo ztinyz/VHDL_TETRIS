@@ -42,13 +42,21 @@ component clkdiv is
        reset : in std_logic;
        clk_in1 : in std_logic);
 end component;
+
 signal Color: std_logic_vector(11 downto 0);
 signal charac: std_logic_vector(7 downto 0);
 signal locked : std_logic;
+
 signal clk25MHz : std_logic;
+
 signal TCH : std_logic;
+
 signal Hcount : integer range 0 to 1687;
 signal Vcount : integer range 0 to 1065;
+
+type coloana_matrix is array (0 to 7, 7 downto 0) of std_logic;
+signal coloana: coloana_matrix :=  ("10000001", "11010000", "11100000", "11110000", "11111000", "11111000", "11010001", "11100001");
+
 begin
 
 a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst);
@@ -113,24 +121,34 @@ variable R,G,B : std_logic_vector(3 downto 0);
 begin
 if rising_edge(clk25MHz)then
     if(Hcount < 640) then  --Hcount < 688 and Hcount > 48
-        if(Vcount >=33 and Vcount < 480) then  --Vcount >33 and Vcount <513
+    
+    
+    
+        if(Vcount < 480) then  --Vcount >33 and Vcount <513
             R:= "1111";
             G:= "1111";
             B:= "1111";
-        else if( Vcount <33)then
+         for j in 0 to 7 loop
+         for i in 0 to 7 loop 
+          if( Vcount <60*(i+1) and Vcount>i*60 and Hcount<80*(j+1) and Hcount >j*80)then
+            if(coloana(j,i) = '1')then
             R:= "1111";
             G:= "0000";
-            B:= "0000";
+            B:= "1111";
             else
-                R:= "0000";
-                G:= "0000";
-                B:= "0000";
+            R:= "1111";
+            G:= "1111";
+            B:= "1111";
             end if;
-       end if;
-else
-     R:= "0000";
-     B:= "0000";
-     G:= "0000";
+            end if;
+         end loop;  
+         end loop;     
+        end if;
+    else
+         R:= "0000";
+         B:= "0000";
+         G:= "0000";
+     
 end if;
 vgaRed <= R;
 vgaBlue <= B;
