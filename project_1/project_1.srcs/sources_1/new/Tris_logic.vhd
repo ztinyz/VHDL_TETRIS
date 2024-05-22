@@ -31,10 +31,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
 entity Tris_logic is
     --Port ( 
-    --BTNL: in std_logic;
-    --BTNR: in std_logic
     --);
 end Tris_logic;
 

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed May 22 15:21:37 2024
+| Date         : Wed May 22 15:54:09 2024
 | Host         : DESKTOP-ODUVKK8 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file vga_timing_summary_routed.rpt -pb vga_timing_summary_routed.pb -rpx vga_timing_summary_routed.rpx -warn_on_violation
 | Design       : vga
@@ -43,8 +43,9 @@ Timing Summary Report
 
 Rule       Severity          Description                    Violations  
 ---------  ----------------  -----------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell    38          
+TIMING-17  Critical Warning  Non-clocked sequential cell    58          
 TIMING-18  Warning           Missing input or output delay  1           
+TIMING-23  Warning           Combinational loop found       1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -54,24 +55,26 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (38)
+1. checking no_clock (58)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (89)
+4. checking unconstrained_internal_endpoints (109)
 5. checking no_input_delay (1)
 6. checking no_output_delay (14)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
-9. checking loops (0)
+9. checking loops (1)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (38)
+1. checking no_clock (58)
 -------------------------
  There is 1 register/latch pin with no clock driven by root clock pin: a/clk_reg/Q (HIGH)
 
  There are 37 register/latch pins with no clock driven by root clock pin: a/clock25mh_reg/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: coloana_reg[7,1]_i_2/O (HIGH)
 
 
 2. checking constant_clock (0)
@@ -84,9 +87,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (89)
--------------------------------------------------
- There are 89 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (109)
+--------------------------------------------------
+ There are 109 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -117,9 +120,9 @@ Table of Contents
  There are 0 generated clocks that are not connected to a clock source.
 
 
-9. checking loops (0)
+9. checking loops (1)
 ---------------------
- There are 0 combinational loops in the design.
+ There is 1 combinational loop in the design. (HIGH)
 
 
 10. checking partial_input_delay (0)

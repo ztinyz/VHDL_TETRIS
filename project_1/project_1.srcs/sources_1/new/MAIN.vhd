@@ -36,6 +36,7 @@ entity vga is
 end vga;
 
 architecture Behavioral of vga is
+
 component clkdiv is
     Port(
        clk_out1 : out std_logic;
@@ -48,6 +49,7 @@ signal charac: std_logic_vector(7 downto 0);
 signal locked : std_logic;
 
 signal clk25MHz : std_logic;
+signal clock : std_logic := '0';
 
 signal TCH : std_logic;
 
@@ -57,9 +59,68 @@ signal Vcount : integer range 0 to 1065;
 type coloana_matrix is array (0 to 7, 7 downto 0) of std_logic;
 signal coloana: coloana_matrix :=  ("10000001", "11010000", "11100000", "11110000", "11111000", "11111000", "11010001", "11100001");
 
+signal index: integer := 6;
+signal index2: integer := 6; -- pt cea mai de jos cu piesa pe ea ( unde se opreste urm piesa)
+signal index3: integer := 6;
+signal coorx: integer := 0;
+signal coory: integer := 0;
+signal same: integer := 0;
+
+-- procedure declaration space:
+
+procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: inout integer; index3: inout integer; index: in integer) is
+    begin
+        if (coloana(7)='1') then        
+        for index2 in 6 downto 1 loop
+            if(coloana(index2) = '0')then
+                for index3 in index2 downto 1 loop 
+                    coloana(index3) := coloana(index3 - 1);
+                end loop;
+                coloana(0) := '0';
+            end if;
+        end loop; 
+        else
+            for i in 6 downto 0 loop
+                coloana(i + 1) := coloana(i);
+            end loop;
+            coloana(0) := '0';
+        end if;
+        
+end procedure update_coloana;
+
+-- end declaration space
 begin
 
 a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst);
+
+process(clock)
+    variable v_index2: integer;
+    variable v_index3: integer;
+    variable v_coloana: std_logic_vector(7 downto 0);
+begin
+    v_index2 := index2;
+    v_index3 := index3;
+  
+        if(index = 0) then
+            index <= 8;
+        else
+            index <= index - 1;
+        end if;
+        
+        if(rising_edge (clock))then
+            for i1 in 0 to 7 loop
+                for j in 0 to 7 loop
+                    v_coloana(j) := coloana(i1, j);
+                end loop;
+                update_coloana(v_coloana, v_index2, v_index3, index);
+                for j in 0 to 7 loop
+                    coloana(i1, j) <= v_coloana(j);
+                end loop;
+            end loop;
+        end if;
+    
+end process;
+
 process(clk25MHz,rst)
 begin
 if(rst = '1') then

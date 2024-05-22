@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed May 22 15:21:18 2024
+| Date         : Wed May 22 15:53:51 2024
 | Host         : DESKTOP-ODUVKK8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_control_sets_placed.rpt
 | Design       : vga
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    33 |
+| Unused register locations in slices containing registers |    37 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
+| Total control sets |     8 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               2 |            2 |
-| No           | No                    | Yes                    |              14 |            8 |
+| No           | No                    | No                     |              22 |            9 |
+| No           | No                    | Yes                    |              14 |            6 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              11 |            4 |
-| Yes          | Yes                   | No                     |              12 |            4 |
+| Yes          | No                    | Yes                    |              11 |            5 |
+| Yes          | Yes                   | No                     |              12 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -77,9 +77,10 @@ Table of Contents
 |  clk_IBUF_BUFG    |               | rst_IBUF         |                1 |              1 |         1.00 |
 |  a/clock25mh_BUFG |               |                  |                2 |              2 |         1.00 |
 |  a/clock25mh_BUFG | G[3]_i_2_n_0  | G                |                1 |              4 |         4.00 |
-|  a/clock25mh_BUFG | R[3]_i_2_n_0  | R                |                3 |              8 |         2.67 |
-|  a/clock25mh_BUFG | TCH_reg_n_0   | rst_IBUF         |                4 |             11 |         2.75 |
-|  a/clock25mh_BUFG |               | rst_IBUF         |                6 |             12 |         2.00 |
+|  a/clock25mh_BUFG | R[3]_i_2_n_0  | R                |                1 |              8 |         8.00 |
+|  a/clock25mh_BUFG | TCH_reg_n_0   | rst_IBUF         |                5 |             11 |         2.20 |
+|  a/clock25mh_BUFG |               | rst_IBUF         |                4 |             12 |         3.00 |
+|  clock            |               |                  |                7 |             20 |         2.86 |
 +-------------------+---------------+------------------+------------------+----------------+--------------+
 
 
