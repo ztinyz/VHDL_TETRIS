@@ -33,14 +33,35 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity clkdiv is
     Port ( clk_in1,reset : in STD_LOGIC;
-           clk_out1 : out STD_LOGIC );
+           clk_out1 : out STD_LOGIC;
+           clockfall : out std_logic );
 end clkdiv;
 
 architecture Behavioral of clkdiv is
+
+--signal reset: std_logic := '0';
+--signal clockfall: std_logic := '0';
+--signal clk_out1: std_logic := '0';
+--signal clk_in1: std_logic := '0';
+
+
+
 signal clk: std_logic := '0';
 signal clock: std_logic := '0';
+
+signal clock1hz: std_logic := '0';
+signal counter: integer := 0;
+
 signal clock25mh: std_logic := '0';
 begin
+
+--process
+--begin
+--clk_in1 <= not(clk_in1);
+--wait for 40ns;
+--end process;
+
+
 process(clk_in1,reset,clock,clk,clock25mh)
 begin
 if( reset = '1') then
@@ -59,8 +80,22 @@ if( reset = '1') then
     clock25mh <= '0';
 else if(rising_edge(clk))then
     clock25mh <= not (clock25mh);
+    clk_out1<= clock25mh;
 end if;
 end if;
 end process;
-clk_out1<= clock25mh;
+
+process(clk_in1)
+begin
+    if(rising_edge(clk_in1))then
+        counter <= counter + 1;
+        if counter = 100000000 then
+            counter <= 0;
+            clock1hz <= not(clock1hz);
+            clockfall <= clock1hz;
+        end if;
+    end if;
+end process;
+
+
 end Behavioral;

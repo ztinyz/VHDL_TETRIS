@@ -41,7 +41,8 @@ component clkdiv is
     Port(
        clk_out1 : out std_logic;
        reset : in std_logic;
-       clk_in1 : in std_logic);
+       clk_in1 : in std_logic;
+       clockfall : out std_logic);
 end component;
 
 signal Color: std_logic_vector(11 downto 0);
@@ -64,7 +65,7 @@ signal index2: integer := 6; -- pt cea mai de jos cu piesa pe ea ( unde se opres
 signal index3: integer := 6;
 signal coorx: integer := 0;
 signal coory: integer := 0;
-signal same: integer := 0;
+signal sameHor: integer := 0;
 
 -- procedure declaration space:
 
@@ -77,6 +78,7 @@ procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: in
                     coloana(index3) := coloana(index3 - 1);
                 end loop;
                 coloana(0) := '0';
+                exit;
             end if;
         end loop; 
         else
@@ -85,13 +87,11 @@ procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: in
             end loop;
             coloana(0) := '0';
         end if;
-        
 end procedure update_coloana;
 
 -- end declaration space
 begin
-
-a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst);
+a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst,clockfall => clock);
 
 process(clock)
     variable v_index2: integer;
@@ -106,9 +106,13 @@ begin
         else
             index <= index - 1;
         end if;
-        
+
         if(rising_edge (clock))then
+        sameHor <= 1;
+
+            
             for i1 in 0 to 7 loop
+                --if(rising_edge (clock))then
                 for j in 0 to 7 loop
                     v_coloana(j) := coloana(i1, j);
                 end loop;
@@ -116,7 +120,18 @@ begin
                 for j in 0 to 7 loop
                     coloana(i1, j) <= v_coloana(j);
                 end loop;
+                --end if;
+                if(coloana(i1,7) = '0')then
+                    sameHor <= 0;
+                end if;
             end loop;
+            
+            if(sameHor = 1)then
+               for i1 in 0 to 7 loop
+                  coloana(i1,7) <= '0';
+               end loop;
+               sameHor <= 0;
+           end if;
         end if;
     
 end process;
