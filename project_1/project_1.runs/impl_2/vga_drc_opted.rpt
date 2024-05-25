@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed May 22 15:53:49 2024
-| Host         : DESKTOP-ODUVKK8 running 64-bit major release  (build 9200)
+| Date         : Thu May 23 23:51:05 2024
+| Host         : DESKTOP-GMN6PCK running 64-bit major release  (build 9200)
 | Command      : report_drc -file vga_drc_opted.rpt -pb vga_drc_opted.pb -rpx vga_drc_opted.rpx
 | Design       : vga
 | Device       : xc7a35tcpg236-1
@@ -24,29 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
-+-------------+------------------+-------------------------------------------------------------+------------+
-| Rule        | Severity         | Description                                                 | Violations |
-+-------------+------------------+-------------------------------------------------------------+------------+
-| LUTLP-1     | Critical Warning | Combinatorial Loop Alert                                    | 1          |
-| PLHOLDVIO-2 | Warning          | Non-Optimal connections which could lead to hold violations | 1          |
-+-------------+------------------+-------------------------------------------------------------+------------+
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
 
 2. REPORT DETAILS
 -----------------
-LUTLP-1#1 Critical Warning
-Combinatorial Loop Alert  
-1 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is clock. Please evaluate your design. The cells in the loop are: coloana_reg[7,1]_i_2.
-Related violations: <none>
-
-PLHOLDVIO-2#1 Warning
-Non-Optimal connections which could lead to hold violations  
-A LUT coloana_reg[7,1]_i_2 is driving clock pin of 20 cells. This could lead to large hold time violations. Involved cells are:
-coloana_reg[0,0], coloana_reg[0,1], coloana_reg[0,2], coloana_reg[0,3],
-coloana_reg[0,4], coloana_reg[0,5], coloana_reg[0,6], coloana_reg[1,4],
-coloana_reg[1,5], coloana_reg[6,0], coloana_reg[6,1], coloana_reg[6,2],
-coloana_reg[6,3], coloana_reg[6,4], coloana_reg[6,5]
- (the first 15 of 20 listed)
-Related violations: <none>
-
 

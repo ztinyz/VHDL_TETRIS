@@ -2,8 +2,8 @@
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1715169061">
   <File Type="PA-TCL" Name="vga.tcl"/>
   <File Type="RDS-RDS" Name="vga.vds"/>
-  <File Type="RDS-UTIL" Name="Tris_logic_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Tris_logic_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="vga_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="vga_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="vga.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

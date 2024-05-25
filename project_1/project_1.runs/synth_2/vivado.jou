@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed May 22 15:52:42 2024
-# Process ID: 25036
-# Current directory: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2
+# Start of session at: Thu May 23 23:49:48 2024
+# Process ID: 22380
+# Current directory: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2
 # Command line: vivado.exe -log vga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga.tcl
-# Log file: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.vds
-# Journal file: C:/Users/Bardi/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2\vivado.jou
-# Running On: DESKTOP-ODUVKK8, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16479 MB
+# Log file: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.vds
+# Journal file: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2\vivado.jou
+# Running On: DESKTOP-GMN6PCK, OS: Windows, CPU Frequency: 3893 MHz, CPU Physical cores: 16, Host memory: 34306 MB
 #-----------------------------------------------------------
 source vga.tcl -notrace
