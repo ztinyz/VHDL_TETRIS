@@ -43,3 +43,178 @@
     <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="15780" HostCore="16" HostMemory="034306576384">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="5992" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10044" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="16036" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="5148" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="17640" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="12764" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="14412" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="5924" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="16600" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="8604" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="13144" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10712" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="15980" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="7752" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="19564" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="19508" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="2900" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="4756" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10628" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="8768" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="5908" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="9968" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10040" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="2576" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="2696" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="16884" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="1560" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="19516" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="19916" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="18892" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10368" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="10112" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="5772" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="17496" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="bardi" Host="DESKTOP-GMN6PCK" Pid="13532" HostCore="16" HostMemory="034306576384">
+    </Process>
+</ProcessHandle>

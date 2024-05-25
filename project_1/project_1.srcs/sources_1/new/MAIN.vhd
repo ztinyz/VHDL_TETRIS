@@ -26,7 +26,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity vga is
     Port ( 
            clk : in STD_LOGIC;
-           BTNR: in STD_LOGIC;
+           BTNR,BTNL: in STD_LOGIC;
            rst : in std_logic;
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
@@ -54,7 +54,7 @@ end component mpg;
 
 signal Color: std_logic_vector(11 downto 0);
 signal butonR : std_logic;
-
+signal butonL : std_logic;
 
 signal clk25MHz : std_logic;
 signal clock : std_logic := '0';
@@ -65,13 +65,15 @@ signal Hcount : integer range 0 to 1687;
 signal Vcount : integer range 0 to 1065;
 
 type coloana_matrix is array (0 to 7, 7 downto 0) of std_logic;
-signal coloana: coloana_matrix :=  ("10000001", "11010000", "11100000", "11110000", "11111000", "11111000", "11010001", "11100001");
-
+--signal coloana: coloana_matrix :=  ("10000001", "11010000", "11100000", "11110000", "11111000", "11111000", "11010001", "11100001");
+signal coloana: coloana_matrix :=  ("00000000", "00000000", "00000000", "00000001", "00000000", "00000000", "00000000", "00000000");
 signal index: integer := 6;
 signal index2: integer := 6; -- pt cea mai de jos cu piesa pe ea ( unde se opreste urm piesa)
 signal index3: integer := 6;
-signal coorx: integer := 0;
+signal coorx: integer := 3;
 signal coory: integer := 0;
+signal coorx2: integer := 3;
+signal coory2: integer := 0;
 signal sameHor: integer := 0;
 
 -- procedure declaration space:
@@ -100,50 +102,81 @@ end procedure update_coloana;
 begin
 a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst,clockfall => clock);
 b: mpg port map(enable=>butonR,clk=>clk,btn => BTNR);
+c: mpg port map(enable=>butonL,clk=>clk,btn => BTNL);
 
 LED <= butonR;
 
-process(clock)
+process(clock,butonR)
     variable v_index2: integer;
     variable v_index3: integer;
     variable v_coloana: std_logic_vector(7 downto 0);
 begin
     v_index2 := index2;
     v_index3 := index3; 
+    
         if(rising_edge (clock))then
-            coloana(0,2)<= '1';
-            if(butonR = '1')then --logica de mutat
-                coloana(coorx,coory) <= '1';
-                coloana(1,0)<= '1';
-                coorx<= coorx + 1;
-                coloana(coorx,coory) <= '1';
-            end if;
-            if coorx = 8 then
-            coorx <= 0;
-            end if;
         sameHor <= 1;
             for i1 in 0 to 7 loop
+                if coorx2 = 1 then
+                coloana(coorx,coory) <='1';
+                coorx2<=0;
+                end if;
+                coory2 <= coory;
+                if butonR = '1' then
+                    if( coloana(coorx,coory - 1) = '0' or coloana(coorx + 1,coory + 1) = '0' or coloana(coorx + 1,coory) = '0')and coorx<7then
+                    coloana(coorx - 1,coory) <='0';
+                    coloana(coorx,coory) <='1';
+                    coorx<= coorx + 1;
+                    else
+                    coory <= coory -1;--ramana y la fel
+                    end if;
+                end if;
+                
+                if butonL = '1' then
+                    if( coloana(coorx,coory - 1) = '0' or coloana(coorx - 1,coory + 1) = '0' or coloana(coorx - 1,coory) = '0')and coorx>0then
+                    coloana(coorx + 1,coory) <='0';
+                    coloana(coorx,coory) <='1';
+                    coorx<= coorx - 1;
+                    else
+                    coory <= coory -1;--ramana y la fel
+                    end if;
+                end if;
+                
                 --if(rising_edge (clock))then
                 for j in 0 to 7 loop
                     v_coloana(j) := coloana(i1, j);
                 end loop;
+                
                 update_coloana(v_coloana, v_index2, v_index3);
+                
                 for j in 0 to 7 loop
+                    
                     coloana(i1, j) <= v_coloana(j);
                 end loop;
+                
                 --end if;
-                if(coloana(i1,7) = '0')then
+                if(coloana(i1,7) = '0' and i1 > 0 and i1 < 7)then
                     sameHor <= 0;
                 end if;
             end loop;
             
+            coory <= coory + 1;
             
-            if(sameHor = 1)then
-               for i1 in 0 to 7 loop
+           if(sameHor = 1)then
+               for i1 in 1 to 6 loop
                   coloana(i1,7) <= '0';
                end loop;
                sameHor <= 0;
            end if;
+           
+            if(coory = 7)then
+            coory<= 0;
+            coorx<=3;
+            coorx2<=1;
+            else
+            coorx2<=0;
+            end if;
+
         end if;
     
 end process;
@@ -219,7 +252,7 @@ if rising_edge(clk25MHz)then
          for j in 0 to 7 loop
          for i in 0 to 7 loop 
           if( Vcount <60*(i+1) and Vcount>i*60 and Hcount<80*(j+1) and Hcount >j*80)then
-            if(coloana(j,i) = '1')then
+            if(coloana(j,i) = '1' and j < 7 and j > 0)then
             case i is
                 when 0 =>
                   R:= "1111";
@@ -246,20 +279,24 @@ if rising_edge(clk25MHz)then
                   G:= "1111";
                   B:= "0000";
                  when 6 =>
-                  R:= "0000";
-                  G:= "0000";
-                  B:= "0000";
+                  R:= "0011";
+                  G:= "1010";
+                  B:= "0101";
                  when 7 =>
                   R:= "1010";
                   G:= "0000";
                   B:= "1010";            
                   
             end case;
-           
-            else
+            elsif (coloana(j,i) = '0' and j < 7 and j > 0 ) then
             R:= "1111";
             G:= "1111";
             B:= "1111";
+            else
+            R:= "0000";
+            G:= "0000";
+            B:= "0000";
+            
             end if;
             end if;
          end loop;  
