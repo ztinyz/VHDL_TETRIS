@@ -99,3 +99,394 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 8
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 16
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 16
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 16
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 16
+wait_on_run impl_2
+reset_run synth_2
+launch_runs impl_2 -to_step write_bitstream -jobs 16
+wait_on_run impl_2
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

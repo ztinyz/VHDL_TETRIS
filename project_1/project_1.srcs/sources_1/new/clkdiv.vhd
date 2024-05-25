@@ -89,7 +89,7 @@ process(clk_in1)
 begin
     if(rising_edge(clk_in1))then
         counter <= counter + 1;
-        if counter = 100000000 then
+        if counter = 30000000 then
             counter <= 0;
             clock1hz <= not(clock1hz);
             clockfall <= clock1hz;

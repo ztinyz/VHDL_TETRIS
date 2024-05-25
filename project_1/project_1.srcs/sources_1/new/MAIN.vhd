@@ -27,7 +27,7 @@ entity vga is
     Port ( 
            clk : in STD_LOGIC;
            BTNR,BTNL: in STD_LOGIC;
-           rst : in std_logic;
+           reset : in std_logic;
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
@@ -55,9 +55,12 @@ end component mpg;
 signal Color: std_logic_vector(11 downto 0);
 signal butonR : std_logic;
 signal butonL : std_logic;
+signal rst : std_logic := '0';
+signal resetmat : std_logic := '0';
 
 signal clk25MHz : std_logic;
 signal clock : std_logic := '0';
+
 
 signal TCH : std_logic;
 
@@ -66,7 +69,7 @@ signal Vcount : integer range 0 to 1065;
 
 type coloana_matrix is array (0 to 7, 7 downto 0) of std_logic;
 --signal coloana: coloana_matrix :=  ("10000001", "11010000", "11100000", "11110000", "11111000", "11111000", "11010001", "11100001");
-signal coloana: coloana_matrix :=  ("00000000", "00000000", "00000000", "00000001", "00000000", "00000000", "00000000", "00000000");
+signal coloana: coloana_matrix :=  ("00000000", "00000000", "00000000", "00000000", "00000000", "00000000", "00000000", "00000000");
 signal index: integer := 6;
 signal index2: integer := 6; -- pt cea mai de jos cu piesa pe ea ( unde se opreste urm piesa)
 signal index3: integer := 6;
@@ -103,9 +106,15 @@ begin
 a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst,clockfall => clock);
 b: mpg port map(enable=>butonR,clk=>clk,btn => BTNR);
 c: mpg port map(enable=>butonL,clk=>clk,btn => BTNL);
+d: mpg port map(enable=>rst,clk=>clk,btn => reset);
 
 LED <= butonR;
-
+process(rst)
+begin
+    if rising_edge(rst) then
+        resetmat <= '1';
+    end if;
+end process;
 process(clock,butonR)
     variable v_index2: integer;
     variable v_index3: integer;
@@ -123,7 +132,7 @@ begin
                 end if;
                 coory2 <= coory;
                 if butonR = '1' then
-                    if( coloana(coorx,coory - 1) = '0' or coloana(coorx + 1,coory + 1) = '0' or coloana(coorx + 1,coory) = '0')and coorx<7then
+                    if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx<7then
                     coloana(coorx - 1,coory) <='0';
                     coloana(coorx,coory) <='1';
                     coorx<= coorx + 1;
@@ -133,7 +142,7 @@ begin
                 end if;
                 
                 if butonL = '1' then
-                    if( coloana(coorx,coory - 1) = '0' or coloana(coorx - 1,coory + 1) = '0' or coloana(coorx - 1,coory) = '0')and coorx>0then
+                    if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx>0then
                     coloana(coorx + 1,coory) <='0';
                     coloana(coorx,coory) <='1';
                     coorx<= coorx - 1;
@@ -149,8 +158,7 @@ begin
                 
                 update_coloana(v_coloana, v_index2, v_index3);
                 
-                for j in 0 to 7 loop
-                    
+                for j in 0 to 7 loop             
                     coloana(i1, j) <= v_coloana(j);
                 end loop;
                 
@@ -159,7 +167,6 @@ begin
                     sameHor <= 0;
                 end if;
             end loop;
-            
             coory <= coory + 1;
             
            if(sameHor = 1)then
