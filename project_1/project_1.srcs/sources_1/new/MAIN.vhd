@@ -26,12 +26,13 @@ use IEEE.NUMERIC_STD.ALL;
 entity vga is
     Port ( 
            clk : in STD_LOGIC;
-           sw : in std_logic_vector(2 downto 0);
+           BTNR: in STD_LOGIC;
            rst : in std_logic;
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
            Hsync : out STD_LOGIC;
+           LED: out STD_LOGIC;
            Vsync : out STD_LOGIC);
 end vga;
 
@@ -45,9 +46,15 @@ component clkdiv is
        clockfall : out std_logic);
 end component;
 
+component mpg is
+    Port ( btn : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           enable : out  STD_LOGIC);
+end component mpg;
+
 signal Color: std_logic_vector(11 downto 0);
-signal charac: std_logic_vector(7 downto 0);
-signal locked : std_logic;
+signal butonR : std_logic;
+
 
 signal clk25MHz : std_logic;
 signal clock : std_logic := '0';
@@ -69,7 +76,7 @@ signal sameHor: integer := 0;
 
 -- procedure declaration space:
 
-procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: inout integer; index3: inout integer; index: in integer) is
+procedure update_coloana(coloana: inout std_logic_vector(7 downto 0); index2: inout integer; index3: inout integer) is
     begin
         if (coloana(7)='1') then        
         for index2 in 6 downto 1 loop
@@ -92,6 +99,9 @@ end procedure update_coloana;
 -- end declaration space
 begin
 a: clkdiv port map(clk_out1=>clk25MHz,clk_in1=>clk,reset=>rst,clockfall => clock);
+b: mpg port map(enable=>butonR,clk=>clk,btn => BTNR);
+
+LED <= butonR;
 
 process(clock)
     variable v_index2: integer;
@@ -99,24 +109,25 @@ process(clock)
     variable v_coloana: std_logic_vector(7 downto 0);
 begin
     v_index2 := index2;
-    v_index3 := index3;
-  
-        if(index = 0) then
-            index <= 8;
-        else
-            index <= index - 1;
-        end if;
-
+    v_index3 := index3; 
         if(rising_edge (clock))then
+            coloana(0,2)<= '1';
+            if(butonR = '1')then --logica de mutat
+                coloana(coorx,coory) <= '1';
+                coloana(1,0)<= '1';
+                coorx<= coorx + 1;
+                coloana(coorx,coory) <= '1';
+            end if;
+            if coorx = 8 then
+            coorx <= 0;
+            end if;
         sameHor <= 1;
-
-            
             for i1 in 0 to 7 loop
                 --if(rising_edge (clock))then
                 for j in 0 to 7 loop
                     v_coloana(j) := coloana(i1, j);
                 end loop;
-                update_coloana(v_coloana, v_index2, v_index3, index);
+                update_coloana(v_coloana, v_index2, v_index3);
                 for j in 0 to 7 loop
                     coloana(i1, j) <= v_coloana(j);
                 end loop;
@@ -125,6 +136,7 @@ begin
                     sameHor <= 0;
                 end if;
             end loop;
+            
             
             if(sameHor = 1)then
                for i1 in 0 to 7 loop
