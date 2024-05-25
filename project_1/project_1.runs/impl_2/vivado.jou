@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu May 23 23:50:39 2024
-# Process ID: 9172
-# Current directory: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/impl_2
+# Start of session at: Sat May 25 15:18:17 2024
+# Process ID: 5656
+# Current directory: D:/1Facultate/Borzei Catalin/DSD/VHDL_TETRIS/project_1/project_1.runs/impl_2
 # Command line: vivado.exe -log vga.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga.tcl -notrace
-# Log file: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.vdi
-# Journal file: C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/impl_2\vivado.jou
-# Running On: DESKTOP-GMN6PCK, OS: Windows, CPU Frequency: 3893 MHz, CPU Physical cores: 16, Host memory: 34306 MB
+# Log file: D:/1Facultate/Borzei Catalin/DSD/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.vdi
+# Journal file: D:/1Facultate/Borzei Catalin/DSD/VHDL_TETRIS/project_1/project_1.runs/impl_2\vivado.jou
+# Running On: voldemort, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 16945 MB
 #-----------------------------------------------------------
 source vga.tcl -notrace

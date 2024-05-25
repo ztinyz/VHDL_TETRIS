@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu May 23 23:51:09 2024
-| Host         : DESKTOP-GMN6PCK running 64-bit major release  (build 9200)
+| Date         : Sat May 25 15:18:58 2024
+| Host         : voldemort running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_control_sets_placed.rpt
 | Design       : vga
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    12 |
-|    Minimum number of control sets                        |    12 |
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    56 |
+| Unused register locations in slices containing registers |    64 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    12 |
+| Total control sets |    13 |
 | >= 0 to < 4        |     5 |
-| >= 4 to < 6        |     1 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     2 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     0 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              42 |           19 |
+| No           | No                    | No                     |              42 |           15 |
 | No           | No                    | Yes                    |              14 |            7 |
-| No           | Yes                   | No                     |              41 |           12 |
+| No           | Yes                   | No                     |              41 |           13 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              11 |            8 |
-| Yes          | Yes                   | No                     |              12 |            4 |
+| Yes          | No                    | Yes                    |              11 |            4 |
+| Yes          | Yes                   | No                     |              12 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,18 +73,19 @@ Table of Contents
 +------------------+---------------+------------------+------------------+----------------+--------------+
 |   Clock Signal   | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG   |               | rst_IBUF         |                1 |              1 |         1.00 |
 |  a/clk           |               |                  |                1 |              1 |         1.00 |
 |  a/clk           |               | rst_IBUF         |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG   |               |                  |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG   |               | rst_IBUF         |                1 |              1 |         1.00 |
 |  a/clk25MHz_BUFG |               |                  |                2 |              2 |         1.00 |
-|  a/clk25MHz_BUFG | G[3]_i_2_n_0  | G[3]_i_1_n_0     |                1 |              4 |         4.00 |
-|  a/clk25MHz_BUFG | R[3]_i_2_n_0  | R                |                3 |              8 |         2.67 |
-|  clockfall_BUFG  |               | sameHor[0]       |                3 |              9 |         3.00 |
-|  a/clk25MHz_BUFG | TCH_reg_n_0   | rst_IBUF         |                8 |             11 |         1.38 |
+|  clk_IBUF_BUFG   |               |                  |                1 |              2 |         2.00 |
+|  a/clk25MHz_BUFG | B             | B[3]_i_1_n_0     |                1 |              4 |         4.00 |
+|  a/clk25MHz_BUFG | B             | G[3]_i_1_n_0     |                1 |              4 |         4.00 |
+|  a/clk25MHz_BUFG | B             | R[3]_i_1_n_0     |                1 |              4 |         4.00 |
+|  clockfall_BUFG  |               | sameHor[0]       |                4 |              9 |         2.25 |
+|  a/clk25MHz_BUFG | TCH_reg_n_0   | rst_IBUF         |                4 |             11 |         2.75 |
 |  a/clk25MHz_BUFG |               | rst_IBUF         |                5 |             12 |         2.40 |
 |  clk_IBUF_BUFG   |               | a/clock1hz       |                9 |             32 |         3.56 |
-|  clockfall_BUFG  |               |                  |               15 |             37 |         2.47 |
+|  clockfall_BUFG  |               |                  |               11 |             37 |         3.36 |
 +------------------+---------------+------------------+------------------+----------------+--------------+
 
 

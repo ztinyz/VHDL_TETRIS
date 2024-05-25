@@ -208,9 +208,42 @@ if rising_edge(clk25MHz)then
          for i in 0 to 7 loop 
           if( Vcount <60*(i+1) and Vcount>i*60 and Hcount<80*(j+1) and Hcount >j*80)then
             if(coloana(j,i) = '1')then
-            R:= "1111";
-            G:= "0000";
-            B:= "1111";
+            case i is
+                when 0 =>
+                  R:= "1111";
+                  G:= "0000";
+                  B:= "1111";
+                when 1 =>
+                  R:= "1111";
+                  G:= "1111";
+                  B:= "0000";
+                 when 2 =>
+                  R:= "0000";
+                  G:= "1111";
+                  B:= "1111";
+                 when 3 =>
+                  R:= "1111";
+                  G:= "0000";
+                  B:= "0000";
+                 when 4 =>
+                  R:= "0000";
+                  G:= "0000";
+                  B:= "1111";
+                 when 5 =>
+                  R:= "0000";
+                  G:= "1111";
+                  B:= "0000";
+                 when 6 =>
+                  R:= "0000";
+                  G:= "0000";
+                  B:= "0000";
+                 when 7 =>
+                  R:= "1010";
+                  G:= "0000";
+                  B:= "1010";            
+                  
+            end case;
+           
             else
             R:= "1111";
             G:= "1111";
