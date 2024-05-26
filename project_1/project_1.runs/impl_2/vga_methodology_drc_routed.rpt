@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Sat May 25 20:33:23 2024
+| Date         : Sun May 26 12:41:11 2024
 | Host         : DESKTOP-GMN6PCK running 64-bit major release  (build 9200)
 | Command      : report_methodology -file vga_methodology_drc_routed.rpt -pb vga_methodology_drc_routed.pb -rpx vga_methodology_drc_routed.rpx
 | Design       : vga
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 166
+             Violations found: 165
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 162        |
-| TIMING-18 | Warning          | Missing input or output delay | 4          |
+| TIMING-18 | Warning          | Missing input or output delay | 3          |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -856,11 +856,6 @@ Related violations: <none>
 TIMING-18#3 Warning
 Missing input or output delay  
 An input delay is missing on reset relative to the rising and/or falling clock edge(s) of sys_clk_pin.
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on LED relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 

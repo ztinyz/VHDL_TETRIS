@@ -32,7 +32,6 @@ entity vga is
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
            Hsync : out STD_LOGIC;
-           LED: out STD_LOGIC;
            Vsync : out STD_LOGIC);
 end vga;
 
@@ -56,7 +55,6 @@ signal Color: std_logic_vector(11 downto 0);
 signal butonR : std_logic;
 signal butonL : std_logic;
 signal rst : std_logic := '0';
-signal resetmat : std_logic := '0';
 
 signal clk25MHz : std_logic;
 signal clock : std_logic := '0';
@@ -108,24 +106,26 @@ b: mpg port map(enable=>butonR,clk=>clk,btn => BTNR);
 c: mpg port map(enable=>butonL,clk=>clk,btn => BTNL);
 d: mpg port map(enable=>rst,clk=>clk,btn => reset);
 
-LED <= butonR;
-process(rst)
-begin
-    if rising_edge(rst) then
-        resetmat <= '1';
-    end if;
-end process;
-process(clock,butonR)
+process(clock,butonR,rst)
     variable v_index2: integer;
     variable v_index3: integer;
     variable v_coloana: std_logic_vector(7 downto 0);
 begin
     v_index2 := index2;
     v_index3 := index3; 
-    
+        
         if(rising_edge (clock))then
         sameHor <= 1;
             for i1 in 0 to 7 loop
+            
+                if (rst = '1') then
+                    for ir in 0 to 7 loop
+                        for jr in 0 to 7 loop
+                            coloana(ir,jr) <= '0';
+                        end loop;
+                    end loop;    
+                end if;
+                
                 if coorx2 = 1 then
                 coloana(coorx,coory) <='1';
                 coorx2<=0;
