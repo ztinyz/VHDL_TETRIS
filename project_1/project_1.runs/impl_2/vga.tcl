@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.tcl"
+  variable script "C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/impl_2/vga.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_2" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_2" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -131,15 +132,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.xpr [current_project]
-  set_property ip_output_repo C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.xpr [current_project]
+  set_property ip_output_repo C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.dcp
+  add_files -quiet C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/constrs_1/Basys-3-Master.xdc
+  read_xdc C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/project_1/project_1.srcs/constrs_1/Basys-3-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
