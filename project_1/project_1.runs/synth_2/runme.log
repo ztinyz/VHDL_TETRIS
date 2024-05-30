@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source vga.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 483.793 ; gain = 179.266
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 485.488 ; gain = 180.734
 Command: read_checkpoint -auto_incremental -incremental C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/utils_1/imports/synth_2/vga.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/utils_1/imports/synth_2/vga.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,9 +27,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14464
+INFO: [Synth 8-7075] Helper process launched with PID 22492
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1320.383 ; gain = 440.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.941 ; gain = 439.660
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:38]
 INFO: [Synth 8-3491] module 'clkdiv' declared at 'C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/clkdiv.vhd:34' bound to instance 'a' of component 'clkdiv' [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:104]
@@ -43,23 +43,23 @@ INFO: [Synth 8-3491] module 'mpg' declared at 'C:/Users/bardi/OneDrive/Desktop/V
 WARNING: [Synth 8-614] signal 'index2' is read in the process but is not in the sensitivity list [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:109]
 WARNING: [Synth 8-614] signal 'index3' is read in the process but is not in the sensitivity list [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:109]
 INFO: [Synth 8-256] done synthesizing module 'vga' (0#1) [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:38]
-WARNING: [Synth 8-6014] Unused sequential element coory2_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element vgaRed_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:318]
-WARNING: [Synth 8-6014] Unused sequential element vgaBlue_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:319]
-WARNING: [Synth 8-6014] Unused sequential element vgaGreen_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:320]
+WARNING: [Synth 8-6014] Unused sequential element coory2_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:134]
+WARNING: [Synth 8-6014] Unused sequential element vgaRed_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:324]
+WARNING: [Synth 8-6014] Unused sequential element vgaBlue_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:325]
+WARNING: [Synth 8-6014] Unused sequential element vgaGreen_reg was removed.  [C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.srcs/sources_1/new/MAIN.vhd:326]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1535.059 ; gain = 654.762
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1531.988 ; gain = 651.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1535.059 ; gain = 654.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1531.988 ; gain = 651.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1535.059 ; gain = 654.762
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1531.988 ; gain = 651.707
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1535.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1531.988 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -70,40 +70,40 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1591.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1630.758 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1591.273 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1630.758 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'sameHor_reg' in module 'vga'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 3     
 	   2 Input   11 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 3     
@@ -111,7 +111,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 81    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 30    
+	   2 Input   32 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 48    
 	   2 Input    7 Bit        Muxes := 1     
@@ -123,7 +123,8 @@ Detailed RTL Component Info :
 	   9 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 3360  
+	   2 Input    1 Bit        Muxes := 2657  
+	   3 Input    1 Bit        Muxes := 224   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -141,25 +142,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -177,37 +178,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -224,14 +225,14 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     3|
-|2     |CARRY4 |    76|
-|3     |LUT1   |    41|
-|4     |LUT2   |   243|
-|5     |LUT3   |    82|
-|6     |LUT4   |    51|
-|7     |LUT5   |   101|
-|8     |LUT6   |   258|
-|9     |MUXF7  |    22|
+|2     |CARRY4 |    80|
+|3     |LUT1   |    11|
+|4     |LUT2   |   295|
+|5     |LUT3   |    64|
+|6     |LUT4   |    98|
+|7     |LUT5   |    89|
+|8     |LUT6   |   226|
+|9     |MUXF7  |    25|
 |10    |MUXF8  |     4|
 |11    |FDCE   |    25|
 |12    |FDRE   |   271|
@@ -240,28 +241,28 @@ Report Cell Usage:
 |15    |OBUF   |    14|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1591.273 ; gain = 654.762
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1591.273 ; gain = 710.977
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:52 . Memory (MB): peak = 1630.758 ; gain = 651.707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1630.758 ; gain = 750.477
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1591.273 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1630.758 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1591.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1630.758 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Synth Design complete | Checksum: b23873d8
+Synth Design complete | Checksum: 92f90905
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1591.273 ; gain = 1103.543
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1591.273 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 1630.758 ; gain = 1142.270
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1630.758 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/bardi/OneDrive/Desktop/VHDL_TETRIS/VHDL_TETRIS/project_1/project_1.runs/synth_2/vga.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 26 12:40:10 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May 30 16:39:48 2024...

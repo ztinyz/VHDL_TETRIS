@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Sun May 26 12:40:10 2024
+| Date         : Thu May 30 16:39:48 2024
 | Host         : DESKTOP-GMN6PCK running 64-bit major release  (build 9200)
 | Command      : report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb
 | Design       : vga
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  608 |     0 |          0 |     20800 |  2.92 |
-|   LUT as Logic          |  608 |     0 |          0 |     20800 |  2.92 |
+| Slice LUTs*             |  597 |     0 |          0 |     20800 |  2.87 |
+|   LUT as Logic          |  597 |     0 |          0 |     20800 |  2.87 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
 | Slice Registers         |  298 |     0 |          0 |     41600 |  0.72 |
 |   Register as Flip Flop |  298 |     0 |          0 |     41600 |  0.72 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                |   22 |     0 |          0 |     16300 |  0.13 |
+| F7 Muxes                |   25 |     0 |          0 |     16300 |  0.15 |
 | F8 Muxes                |    4 |     0 |          0 |      8150 |  0.05 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -151,17 +151,17 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT2     |  295 |                 LUT |
 | FDRE     |  271 |        Flop & Latch |
-| LUT6     |  258 |                 LUT |
-| LUT2     |  243 |                 LUT |
-| LUT5     |  101 |                 LUT |
-| LUT3     |   82 |                 LUT |
-| CARRY4   |   76 |          CarryLogic |
-| LUT4     |   51 |                 LUT |
-| LUT1     |   41 |                 LUT |
+| LUT6     |  226 |                 LUT |
+| LUT4     |   98 |                 LUT |
+| LUT5     |   89 |                 LUT |
+| CARRY4   |   80 |          CarryLogic |
+| LUT3     |   64 |                 LUT |
+| MUXF7    |   25 |               MuxFx |
 | FDCE     |   25 |        Flop & Latch |
-| MUXF7    |   22 |               MuxFx |
 | OBUF     |   14 |                  IO |
+| LUT1     |   11 |                 LUT |
 | MUXF8    |    4 |               MuxFx |
 | IBUF     |    4 |                  IO |
 | BUFG     |    3 |               Clock |

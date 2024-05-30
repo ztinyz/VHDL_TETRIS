@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Sun May 26 12:41:11 2024
+| Date             : Thu May 30 16:40:48 2024
 | Host             : DESKTOP-GMN6PCK running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_power_routed.rpt -pb vga_power_summary_routed.pb -rpx vga_power_routed.rpx
 | Design           : vga
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.080        |
+| Total On-Chip Power (W)  | 0.079        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.009        |
+| Dynamic (W)              | 0.008        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1191 |       --- |             --- |
-|   LUT as Logic |     0.001 |      600 |     20800 |            2.88 |
-|   CARRY4       |    <0.001 |       76 |      8150 |            0.93 |
+| Slice Logic    |     0.001 |     1205 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      588 |     20800 |            2.83 |
+|   CARRY4       |    <0.001 |       80 |      8150 |            0.98 |
 |   Register     |    <0.001 |      302 |     41600 |            0.73 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
-|   F7/F8 Muxes  |    <0.001 |       26 |     32600 |            0.08 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.001 |      906 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |       29 |     32600 |            0.09 |
+| Signals        |    <0.001 |      836 |       --- |             --- |
 | I/O            |     0.004 |       18 |       106 |           16.98 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.080 |          |           |                 |
+| Total          |     0.079 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,8 +142,7 @@ Table of Contents
 +------+-----------+
 | Name | Power (W) |
 +------+-----------+
-| vga  |     0.009 |
-|   d  |     0.001 |
+| vga  |     0.008 |
 +------+-----------+
 
 

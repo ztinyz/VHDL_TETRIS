@@ -127,30 +127,36 @@ begin
                 end if;
                 
                 if coorx2 = 1 then
-                coloana(coorx,coory) <='1';
-                coorx2<=0;
+                    coloana(coorx,coory) <='1';
+                    coorx2<=0;
                 end if;
+                
                 coory2 <= coory;
+                if (butonR = '1' and butonL = '0') or (butonR = '0' and butonL = '1') then
                 if butonR = '1' then
-                    if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx<7then
-                    coloana(coorx - 1,coory) <='0';
-                    coloana(coorx,coory) <='1';
-                    coorx<= coorx + 1;
+                    if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx<7 and coory < 6then
+                        coorx<= coorx + 1;
+                        coloana(coorx - 1,coory) <='0';
+                        coloana(coorx + 1,coory) <='0';
+                        coloana(coorx,coory) <='1';
+                        
                     else
-                    coory <= coory -1;--ramana y la fel
+                        coory <= coory -1;--ramana y la fel
+                    end if;
+                else
+                    if butonL = '1' then
+                        if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx>0 and coory < 6then
+                            coorx<= coorx - 1;
+                            coloana(coorx - 1,coory) <='0';
+                            coloana(coorx + 1,coory) <='0';
+                            coloana(coorx,coory) <='1';
+                            
+                        else
+                            coory <= coory -1;--ramana y la fel
+                        end if;
                     end if;
                 end if;
-                
-                if butonL = '1' then
-                    if(coloana(coorx - 1,coory + 1) = '0' and coloana(coorx - 1,coory) = '0' and coloana(coorx,coory + 1) = '0' and coloana(coorx + 1,coory + 1) = '0' and coloana(coorx + 1,coory) = '0')and coorx>0then
-                    coloana(coorx + 1,coory) <='0';
-                    coloana(coorx,coory) <='1';
-                    coorx<= coorx - 1;
-                    else
-                    coory <= coory -1;--ramana y la fel
-                    end if;
                 end if;
-                
                 --if(rising_edge (clock))then
                 for j in 0 to 7 loop
                     v_coloana(j) := coloana(i1, j);
